@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wel Coome to Basic Programming ");
+            Console.WriteLine("Enter Number : ");
+            int H = Convert.ToInt32(Console.ReadLine());
+            double value =0;
+            for (int i = 1; i <= H; i++)
+            {
+                value += 1 / (float)i;
+            }
+            Console.WriteLine("Sum of n Numbher of Hrmonic series is " + value);
+
         }
     }
 }
