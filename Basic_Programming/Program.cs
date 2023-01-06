@@ -1,31 +1,29 @@
-﻿namespace Basic_Programming
+﻿using System;
+
+namespace Basic_Programming
 {
     public class Program
     {
+
         static void Main(string[] args)
         {
-            int Times = 100;
-            float count1 = 0;
-            float count2 = 0;
-            for (int i = 1; i <= Times; i++)
+            Console.WriteLine("Enter the Index of 2 : ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int a = 1;
+            int b = 0;
+            int num;
+            for (int i = 0; i < N; i++)
             {
-                Random random = new Random();
-                int Flip = random.Next(0, 2);
-
-                if (Flip == 0)
+                if (N >= 31)
                 {
-                    Console.WriteLine("HEAD");
-                    count1++;
+                    Console.WriteLine("Value is ouf of Int Limit");
+                    break;
                 }
-                else if (Flip == 1)
-                {
-                    Console.WriteLine("TAILS");
-                    count2++;
-                }
-          
+                num = (2 * a);
+                a = num;
+                b++;
+                Console.WriteLine("2 to the Power of " + b + " is : " + num);
             }
-            double Percentage = (count1 / count2) * 100;
-            Console.WriteLine("Percentage of Head vs Tail is : " + (Math.Round(Percentage, 2)));
         }
     }
 }
